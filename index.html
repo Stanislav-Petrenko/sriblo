@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <style>
+      .uc-all-wrapp {
+         max-width: 1000px;
+         margin: 0 auto;
+         cursor: pointer;
+         border-left: 1px solid #F5F8FC;
+         border-right: 1px solid #F5F8FC;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .uc-b1-panel {
+         background-color: #1B3764;
+         padding: 60px;
+      }
+
+      .uc-b1-content {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .uc-b1-texts {
+         width: 50%;
+         color: #fff;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .uc-b1-header {
+         font-size: 20px;
+         margin: 0 0 10px 0;
+      }
+
+      .uc-b1-sub-header {
+         font-size: 36px;
+         line-height: 40px;
+         margin: 0 0 15px 0;
+      }
+
+      .uc-b1-text {
+         font-size: 16px;
+         margin: 0 0 15px 0;
+      }
+
+      .uc-b1-image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+      }
+
+      .uc-b1-image img {
+         max-width: 300px;
+         border: 5px solid #FFCA42;
+      }
+
+      .uc-b1-btn {
+         display: inline-block;
+         color: rgb(27, 55, 100);
+         padding: 10px 30px;
+         background-color: #FFCA42;
+         border: 2px solid #FFCA42;
+         text-decoration: none;
+         transition: .4s;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .uc-b1-btn:hover {
+         background: transparent;
+         color: #FFCA42;
+         transition: .4s;
+      }
+
+      .uc-b1-btn-special {
+         display: inline-block;
+         background-color: transparent;
+         position: relative;
+         color: #fff;
+         padding: 10px 0 3px 0;
+         margin: 0 0 0 15px;
+         border: none;
+      }
+
+      .uc-b1-btn-special::after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 100%;
+         width: 110%;
+         border-bottom: #fff 1px solid;
+         transition: .2s;
+      }
+
+      .uc-b1-btn-special:hover::after {
+         width: 115%;
+         transition: .2s;
+      }
+
+      .uc-b1-advanteges-container {
+         max-width: 60%;
+      }
+
+      .uc-b1-advanteges {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .uc-b1-advanteges-item {
+         margin: 20px 10px 20px 20px;
+         position: relative;
+      }
+
+      .uc-b1-advanteges-item::after {
+         position: absolute;
+         content: "";
+         top: 7px;
+         left: -16px;
+         background-color: #FFCA42;
+         border-radius: 50%;
+         width: 10px;
+         height: 10px;
+         transition: .2s;
+      }
+
+      .uc-b1-advanteges-item:hover::after {
+         transform: scale(1.15);
+
+         transition: .2s;
+      }
+
+      @media screen and (max-width: 810px) {
+
+         .uc-b1-panel {
+            padding: 40px;
+         }
+
+         .uc-b1-image {
+            display: none;
+         }
+
+         .uc-b1-texts {
+            width: auto;
+         }
+
+
+      }
+
+      /*-----------------------------*/
+
+
+      .uc-b2-panel {
+         background-color: #F5F8FC;
+         padding: 60px;
+         color: #1B3764;
+      }
+
+      .uc-b2-wrapp {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .uc-b2-image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0 !important;
+         margin: 0 !important;
+      }
+
+      .uc-b2-image-border {
+         border: 5px solid #FFCA42;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+
+
+      .uc-b2-image-border img {
+         max-width: 300px;
+         max-height: 300px;
+
+      }
+
+      @keyframes bob-on-hover {
+         0% {
+            transform: rotate(0deg) translateX(-30px) translateY(-30px) rotate(0deg);
+         }
+
+         100% {
+            transform: rotate(10deg) translateX(-30px) translateY(-30px) rotate(-10deg);
+         }
+      }
+
+      @keyframes bob-on-hover-float {
+
+         0% {
+            transform: rotate(10deg) translateX(-30px) translateY(-30px) rotate(-10deg);
+         }
+
+         100% {
+            transform: rotate(-5deg) translateX(0px) translateY(0px) rotate(5deg);
+         }
+      }
+
+      .bob-on-hover {
+         animation-name: bob-on-hover;
+         animation-duration: 2s;
+         animation-delay: 0s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: infinite;
+         animation-fill-mode: forwards;
+         animation-direction: alternate;
+         box-shadow: rgba(27, 55, 100, 0.25) 0px 13px 27px -5px, rgba(27, 55, 100, 0.3) 0px 8px 16px -8px;
+         transition: 0.7s;
+      }
+
+      .bob-on-hover:hover,
+      .bob-on-hover:focus,
+      .bob-on-hover:active {
+         animation-name: bob-on-hover-float;
+         animation-duration: .7s;
+         animation-delay: 0s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: 1;
+         animation-fill-mode: forwards;
+         animation-direction: normal;
+         box-shadow: none;
+         transition: 0.7s;
+      }
+
+      .uc-b2-content {
+         width: 50%;
+      }
+
+      .uc-b2-title {
+         font-size: 22px;
+         margin: 20px 0;
+         position: relative;
+         font-weight: 600;
+      }
+
+      .uc-b2-title::after {
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 7%;
+         border-bottom: 2px solid #FFCA42;
+         bottom: -3px;
+         left: 0;
+      }
+
+      .uc-b2-about {}
+
+      .uc-b2-text {
+         color: #1B3764;
+      }
+
+      .uc-b2-numb-wrapp {
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: wrap;
+      }
+
+      .uc-b2-numbers {
+         width: 28%;
+         margin: 20px 10px 20px 0;
+         color: #1B3764;
+
+         padding: 0 5px 0 0;
+         position: relative;
+      }
+
+      .uc-b2-numbers::after {
+         position: absolute;
+         content: "";
+         height: 100%;
+         width: 100%;
+         right: 0;
+         bottom: 0;
+         border-right: 2px solid #FFCA42;
+         transition: 0.4s;
+      }
+
+      .uc-b2-numbers:hover::after {
+         animation: numbers .4s ease-in;
+      }
+
+      @keyframes numbers {
+         0% {
+            height: 100%;
+         }
+
+         50% {
+            height: 20%;
+         }
+
+         100% {
+            height: 100%;
+         }
+      }
+
+
+      .uc-b2-numbers-zifra {
+         font-size: 26px;
+         margin: 0 0 10px 0;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .uc-b2-numbers-text {}
+
+      @media screen and (max-width: 900px) {
+
+
+
+         .uc-b2-numbers {
+            width: 90%;
+
+         }
+
+
+      }
+
+      @media screen and (max-width: 810px) {
+
+         .uc-b2-panel {
+            padding: 40px;
+         }
+
+         .uc-b2-image {
+            display: none;
+         }
+
+         .uc-b2-content {
+            width: auto;
+         }
+
+         .uc-b2-numbers {
+            width: 90%;
+
+         }
+      }
+
+      @media screen and (max-width: 410px) {
+
+         .uc-b2-panel {
+            padding: 30px;
+         }
+
+
+      }
+
+      /*----------------------*/
+
+
+
+      .uc-b3-panel {
+         padding: 30px;
+         background-color: #fff;
+         color: #1B3764;
+      }
+
+      .uc-title {
+         text-align: center;
+         font-size: 22px;
+         position: relative;
+      }
+
+      .uc-title::after {
+         content: '';
+         position: absolute;
+         width: 3%;
+         height: 100%;
+         top: 5px;
+         left: 50%;
+         border-bottom: 2px solid #FFCA42;
+      }
+
+      .uc-title::before {
+         content: '';
+         position: absolute;
+         width: 3%;
+         height: 100%;
+         top: 5px;
+         left: 47%;
+         border-bottom: 2px solid #FFCA42;
+      }
+
+      .uc-b3-wrapper {
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: wrap;
+      }
+
+      .uc-b3-item {
+         display: flex;
+         flex-direction: column;
+         width: 24%;
+         color: #1B3764;
+         text-align: center;
+         padding: 20px;
+         margin: 20px 0;
+      }
+
+
+      .uc-b3-image {}
+
+      .uc-b3-title {
+         margin: 10px 0;
+         color: #1B3764;
+         font-size: 18px;
+         font-weight: 600;
+         position: relative;
+      }
+
+      .uc-b3-title::after {
+         content: '';
+         position: absolute;
+         width: 10%;
+         height: 100%;
+         top: 5px;
+         left: 50%;
+         border-bottom: 2px solid #FFCA42;
+      }
+
+      .uc-b3-title::before {
+         content: '';
+         position: absolute;
+         width: 10%;
+         height: 100%;
+         top: 5px;
+         left: 40%;
+         border-bottom: 2px solid #FFCA42;
+      }
+
+      .uc-b3-text {
+         color: #1B3764;
+         font-size: 16px;
+      }
+
+      .uc-b3-btn:hover {
+         color: #1B3764;
+      }
+
+      @media screen and (max-width: 810px) {
+
+         .uc-b3-panel {
+            padding: 40px;
+         }
+
+         .uc-b3-item {
+            width: 90%;
+            margin: 10px 0;
+         }
+      }
+
+      @media screen and (max-width: 410px) {
+
+         .uc-b3-panel {
+            padding: 20px;
+         }
+
+
+      }
+
+      /*----------------------*/
+
+
+
+      .uc-b4-panel {
+         background-color: #F5F8FC;
+         padding: 60px;
+         color: #1B3764;
+      }
+
+      .uc-b4-wrapp {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+
+      .uc-b4-image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0 !important;
+         margin: 0 !important;
+      }
+
+      .uc-b4-image-border {
+         border: 5px solid #FFCA42;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+
+      .uc-b4-image-border img {
+         max-width: 300px;
+         max-height: 300px;
+
+      }
+
+      .bob-on-hover-2 {}
+
+      @keyframes bob-on-hover-2 {
+         0% {
+            transform: rotate(0deg) translateX(30px) translateY(-30px) rotate(0deg);
+         }
+
+         100% {
+            transform: rotate(10deg) translateX(30px) translateY(-30px) rotate(-10deg);
+         }
+      }
+
+      @keyframes bob-on-hover-float-2 {
+
+         0% {
+            transform: rotate(10deg) translateX(30px) translateY(-30px) rotate(-10deg);
+         }
+
+         100% {
+            transform: rotate(-5deg) translateX(0px) translateY(0px) rotate(5deg);
+         }
+      }
+
+      .bob-on-hover-2 {
+         animation-name: bob-on-hover-2;
+         animation-duration: 2s;
+         animation-delay: 0s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: infinite;
+         animation-fill-mode: forwards;
+         animation-direction: alternate;
+         box-shadow: rgba(27, 55, 100, 0.25) 0px 13px 27px -5px, rgba(27, 55, 100, 0.3) 0px 8px 16px -8px;
+         transition: 0.7s;
+      }
+
+      .bob-on-hover-2:hover,
+      .bob-on-hover-2:focus,
+      .bob-on-hover-2:active {
+         animation-name: bob-on-hover-float-2;
+         animation-duration: .7s;
+         animation-delay: 0s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: 1;
+         animation-fill-mode: forwards;
+         animation-direction: normal;
+         box-shadow: none;
+         transition: 0.7s;
+      }
+
+      .uc-b4-content {
+         width: 50%;
+      }
+
+      .uc-b4-title {
+         font-size: 22px;
+         margin: 20px 0;
+         position: relative;
+         font-weight: 600;
+      }
+
+      .uc-b4-title::after {
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 7%;
+         border-bottom: 2px solid #FFCA42;
+         bottom: -3px;
+         left: 0;
+      }
+
+      .uc-b4-wrapper {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+
+      .uc-b4-item {
+         width: 48%;
+         background-color: #fff;
+         color: #1B3764;
+         padding: 15px;
+         margin: 15px 0 0 0;
+         position: relative;
+
+      }
+
+      .uc-b4-item::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: #FFCA42;
+         width: 0;
+         height: 0;
+         transition: .4s;
+         transition-delay: .2s;
+
+      }
+
+      .uc-b4-item:hover::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: #FFCA42;
+         width: 100%;
+         height: 100%;
+         transition: .4s;
+         transition-delay: .2s;
+      }
+
+      .uc-b4-zifra {
+         display: flex;
+         padding: 10px;
+         justify-content: center;
+         align-items: center;
+         background-color: #FFCA42;
+         border-radius: 50%;
+         height: 30px;
+         width: 30px;
+         font-size: 24px;
+         margin: 0 0 10px 0;
+         z-index: 5;
+         position: relative;
+
+      }
+
+      .uc-b4-item:hover .uc-b4-zifra {
+         animation-name: zifra;
+         animation-duration: 0.4s;
+         animation-delay: 0s;
+         animation-timing-function: linear;
+         animation-iteration-count: 1;
+         animation-fill-mode: forwards;
+         animation-direction: alternate;
+
+
+      }
+
+      @keyframes zifra {
+
+         0% {
+            transform: translateX(0px) translateY(0px);
+         }
+
+         50% {
+            transform: translateX(-15px) translateY(-15px);
+         }
+
+         100% {
+            transform: translateX(0px) translateY(0px);
+         }
+      }
+
+      .uc-b4-sub-title {
+         font-size: 18px;
+         font-weight: 600;
+         margin: 0 0 5px 0;
+         z-index: 5;
+         position: relative;
+      }
+
+      .uc-b4-text {
+         z-index: 5;
+         position: relative;
+      }
+
+      @media screen and (max-width: 810px) {
+
+         .uc-b4-panel {
+            padding: 40px;
+         }
+
+         .uc-b4-item {
+            width: 100%;
+
+         }
+
+         .uc-b4-image {
+            display: none;
+         }
+
+         .uc-b4-content {
+            width: 100%;
+         }
+      }
+
+      @media screen and (max-width: 410px) {
+
+         .uc-b4-panel {
+            padding: 30px;
+         }
+
+
+      }
+
+
+      /*-------------------*/
+
+
+      .uc-b5-panel {
+         background-color: #1B3764;
+         padding: 60px;
+      }
+
+      .uc-b5-content {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+
+      .uc-b5-image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .uc-b5-image img {
+         max-width: 300px;
+         border: 5px solid #FFCA42;
+      }
+
+      .uc-b5-texts {
+         width: 50%;
+         color: #fff;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .uc-b5-title {}
+
+      .uc-b5-title {
+         font-size: 22px;
+         margin: 20px 0;
+         position: relative;
+         font-weight: 600;
+      }
+
+      .uc-b5-title::after {
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 7%;
+         border-bottom: 2px solid #FFCA42;
+         bottom: -3px;
+         left: 0;
+      }
+
+      .uc-b5-text {
+         font-size: 16px;
+         margin: 0 0 15px 0;
+      }
+
+      .uc-b5-btn *,
+      div,
+      span {
+         box-sizing: border-box;
+      }
+
+      .social {
+         display: flex;
+         align-items: center;
+         position: relative;
+         width: 200px;
+         height: 45px;
+         box-shadow: inset 0 0 0 2px #FFCA42;
+         color: #FFCA42;
+         background: transparent;
+         overflow: hidden;
+         transition: box-shadow 0.2s ease-out;
+      }
+
+      .social span,
+      .social div {
+         margin: auto;
+      }
+
+      .social .social-links {
+         display: flex;
+         align-items: center;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: rgba(62, 130, 251, 0);
+         width: 100%;
+         height: 100%;
+         padding: 0 15px;
+         transition: all 0.25s ease;
+      }
+
+      .social .social-links a {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: auto;
+         background: #fff;
+         color: #1B3764;
+         width: 30px;
+         height: 30px;
+         border-radius: 5px;
+         line-height: 30px;
+         font-size: 15px;
+         transform: translate3d(0, 60px, 0);
+         transition: all 0.2s;
+      }
+
+      .social .social-links a:hover {
+         background: #d4e7ff;
+         color: #fff;
+      }
+
+      .social:hover {
+         box-shadow: inset 0 0 0 2px #dbe3ea, 0 1rem 20px rgba(62, 130, 251, .2);
+      }
+
+      .social:hover .social-links {
+         background: #FFCA42;
+      }
+
+      .social:hover .social-links>a {
+         animation: elastic 0.5s ease-out forwards 0s;
+      }
+
+      .social:hover .social-links>a:nth-child(2) {
+         animation-delay: 0.05s;
+      }
+
+      .social:hover .social-links>a:nth-child(3) {
+         animation-delay: 0.1s;
+      }
+
+      .social:hover .social-links>a:nth-child(4) {
+         animation-delay: 0.15s;
+      }
+
+      .social:hover .social-links>a:nth-child(5) {
+         animation-delay: 0.2s;
+      }
+
+      @keyframes elastic {
+         0% {
+            transform: translate3d(0, 60px, 0);
+         }
+
+         40% {
+            transform: translate3d(0, -5px, 0);
+         }
+
+         70% {
+            transform: translate3d(0, 5px, 0);
+         }
+
+         100% {
+            transform: translate3d(0, 0, 0);
+         }
+      }
+
+      .social-img {
+         width: 17px;
+         height: 17px;
+         display: flex;
+         margin: 0 auto;
+      }
+
+      @media screen and (max-width: 810px) {
+
+         .uc-b5-panel {
+            padding: 40px;
+         }
+
+         .uc-b5-texts {
+            width: 100%;
+
+         }
+
+         .uc-b5-image {
+            display: none;
+         }
+      }
+
+      @media screen and (max-width: 410px) {
+
+         .uc-b5-panel {
+            padding: 30px;
+         }
+
+
+      }
+   </style>
+   <div class="uc-all-wrapp">
+      <div class="uc-b1-panel">
+         <div class="uc-b1-content">
+            <div class="uc-b1-texts">
+               <div class="uc-b1-header">
+                  Раді вітати в інтернет-магазині VasheSriblo
+               </div>
+               <div class="uc-b1-sub-header">
+                  Знайдеться Все <br> Про Що Ви Мріяли
+               </div>
+               <div class="uc-b1-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident esse a natus sunt doloribus quia
+                  sed
+                  ex
+                  temporibus omnis animi laboriosam quae cum placeat numquam autem ratione, asperiores velit incidunt.
+               </div>
+
+               <a class="uc-b1-btn" href="">Контакти</a>
+
+               <span> <a class="uc-b1-btn uc-b1-btn-special" href="#bot"> До каталогу </a> </span>
+               <div class="uc-b1-advanteges-container">
+                  <div class="uc-b1-advanteges">
+                     <div class="uc-b1-advanteges-item">
+                        Якість
+                     </div>
+                     <div class="uc-b1-advanteges-item">
+                        Стиль
+                     </div>
+                     <div class="uc-b1-advanteges-item">
+                        Надійність
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="uc-b1-image"><img src="https://internetsolution.com.ua/Pictures/testdesign/img2/b1-1.jpg"
+                  alt=""></div>
+         </div>
+
+      </div>
+   </div>
+   <!-------------->
+   <div class="uc-all-wrapp">
+      <div class="uc-b2-panel">
+         <div class="uc-b2-wrapp">
+            <div class="uc-b2-image">
+               <div class="uc-b2-image-border"><img class="bob-on-hover"
+                     src="https://internetsolution.com.ua/Pictures/testdesign/img2/b2-1.jpg" alt=""></div>
+            </div>
+            <div class="uc-b2-content">
+               <div class="uc-b2-title">Наша історія</div>
+               <div class="uc-b2-about">
+                  <div class="uc-b2-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit,
+                     laudantium eius eligendi error nostrum iure porro ipsum eaque? Fugit excepturi recusandae
+                     temporibus quos a repellat nobis eos aut laudantium ipsam?</div>
+                  <div class="uc-b2-numb-wrapp">
+                     <div class="uc-b2-numbers">
+                        <div class="uc-b2-numbers-zifra">15</div>
+                        <div class="uc-b2-numbers-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                     <div class="uc-b2-numbers">
+                        <div class="uc-b2-numbers-zifra">1000+</div>
+                        <div class="uc-b2-numbers-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                     <div class="uc-b2-numbers">
+                        <div class="uc-b2-numbers-zifra">500+</div>
+                        <div class="uc-b2-numbers-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-------------->
+   <div class="uc-all-wrapp">
+      <div class="uc-b3-panel">
+         <h2 class="uc-title">Переваги нашого магазину</h2>
+         <div class="uc-b3-wrapper">
+            <div class="uc-b3-item">
+               <div class="uc-b3-image">
+                  <img src="https://internetsolution.com.ua/Pictures/testdesign/img2/001-b3.png" alt="">
+               </div>
+               <div class="uc-b3-title">lorem ipsum</div>
+               <div class="uc-b3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur.
+                  Architecto nobis quos aut possimus. </div>
+            </div>
+            <div class="uc-b3-item">
+               <div class="uc-b3-image">
+                  <img src="https://internetsolution.com.ua/Pictures/testdesign/img2/002-b3.png" alt="">
+               </div>
+               <div class="uc-b3-title">lorem ipsum</div>
+               <div class="uc-b3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur.
+                  Architecto nobis quos aut possimus. </div>
+            </div>
+            <div class="uc-b3-item">
+               <div class="uc-b3-image">
+                  <img src="https://internetsolution.com.ua/Pictures/testdesign/img2/003-b3.png" alt="">
+               </div>
+               <div class="uc-b3-title">lorem ipsum</div>
+               <div class="uc-b3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur.
+                  Architecto nobis quos aut possimus. </div>
+            </div>
+            <div class="uc-b3-item">
+               <div class="uc-b3-image">
+                  <img src="https://internetsolution.com.ua/Pictures/testdesign/img2/004-b3.png" alt="">
+               </div>
+               <div class="uc-b3-title">lorem ipsum</div>
+               <div class="uc-b3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, pariatur.
+                  Architecto nobis quos aut possimus. </div>
+            </div>
+
+         </div>
+         <p style="text-align: center;"> <a class="uc-b1-btn uc-b3-btn" href="">Відгуки клієнтів</a></p>
+
+      </div>
+   </div>
+   <!-------------->
+   <div class="uc-all-wrapp">
+      <div class="uc-b4-panel">
+         <div class="uc-b4-wrapp">
+            <div class="uc-b4-content">
+               <div class="uc-b4-title">Як замовити?</div>
+               <div class="uc-b4-delivery">
+                  <div class="uc-b4-wrapper">
+                     <div class="uc-b4-item">
+                        <div class="uc-b4-zifra">1</div>
+                        <div class="uc-b4-sub-title">Lorem ipsum </div>
+                        <div class="uc-b4-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                     <div class="uc-b4-item">
+                        <div class="uc-b4-zifra">2</div>
+                        <div class="uc-b4-sub-title">Lorem ipsum </div>
+                        <div class="uc-b4-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                     <div class="uc-b4-item">
+                        <div class="uc-b4-zifra">3</div>
+                        <div class="uc-b4-sub-title">Lorem ipsum </div>
+                        <div class="uc-b4-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+                     <div class="uc-b4-item">
+                        <div class="uc-b4-zifra">4</div>
+                        <div class="uc-b4-sub-title">Lorem ipsum </div>
+                        <div class="uc-b4-text">Lorem ipsum dolor sit amet consectetur
+                           adipisicing elit. Quia, repudiandae?</div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+            <div class="uc-b4-image">
+               <div class="uc-b4-image-border"><img class="bob-on-hover-2"
+                     src="https://internetsolution.com.ua/Pictures/testdesign/img2/b4-1.jpg" alt=""></div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <div class="uc-all-wrapp">
+      <div class="uc-b5-panel">
+         <div class="uc-b5-content">
+            <div class="uc-b5-image"><img src="https://internetsolution.com.ua/Pictures/testdesign/img2/b5-1.jpg"
+                  alt=""></div>
+            <div class="uc-b5-texts">
+               <div class="uc-b5-title">
+                  Спеціальні пропозиції
+               </div>
+               <div class="uc-b5-text"> Ea beatae ad tempore
+                  reprehenderit eligendi, excepturi, esse iste, facilis odio consequatur magni totam! Aperiam expedita,
+                  labore impedit obcaecati eveniet architecto vero? <p>Lorem, ipsum dolor sit amet consectetur
+                     adipisicing elit. Eum dolore dolorem recusandae, saepe dicta quidem consequuntur reiciendis at
+                     aspernatur quos quia nesciunt architecto blanditiis impedit. Quibusdam dolorem illum quasi
+                     expedita.</p>
+               </div>
+               <div class="social">
+                  <span>Зв'язатися з нами</span>
+                  <div class="social-links">
+                     <a href="#"><img class="social-img"
+                           src="https://internetsolution.com.ua/Pictures/testdesign/img2/001-b5.png"
+                           aria-hidden="true"></img></a>
+                     <a href="#"><img class="social-img"
+                           src="https://internetsolution.com.ua/Pictures/testdesign/img2/002-b5.png"
+                           aria-hidden="true"></img></a>
+                     <a href="#"><img class="social-img"
+                           src="https://internetsolution.com.ua/Pictures/testdesign/img2/003-b5.png"
+                           aria-hidden="true"></img></a>
+                     <a href="#"><img class="social-img"
+                           src="https://internetsolution.com.ua/Pictures/testdesign/img2/004-b5.png"
+                           aria-hidden="true"></img></a>
+
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+      <a name="bot" href=""></a>
+   </div>
+</body>
+
+</html>
